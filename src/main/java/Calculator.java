@@ -17,4 +17,18 @@ public class Calculator {
         }
         return firstNum / secondNum;
     }
+
+    public int subtract(int firstNum, int secondNum)
+    {
+        long result = (long) firstNum - secondNum;
+        if (result < Integer.MIN_VALUE)
+        {
+            throw new IllegalArgumentException("Input is too small");
+        }
+        if (result < 0)
+        {
+            throw new IllegalStateException("Negative results not allowed");
+        }
+        return (int) result;
+    }
 }
