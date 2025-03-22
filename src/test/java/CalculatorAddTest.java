@@ -12,13 +12,9 @@ public class CalculatorAddTest {
         myCalc = new Calculator();
     }
     @Test
-    void testAddSuccess()
-    {
-        assertEquals(8, myCalc.add(4,4));
-    }
+    void testAddSuccess() {assertEquals(8, myCalc.add(4,4));}
     @Test
-    void testAdddFailure()
-    {
+    void testAdddFailure() {
         Exception ex = assertThrows(IllegalArgumentException.class, ()->{myCalc.add(Integer.MAX_VALUE, 4);});
         assertEquals("Input is too large", ex.getMessage());
     }
