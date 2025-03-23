@@ -31,4 +31,17 @@ public class Calculator {
         }
         return (int) result;
     }
+
+    public int multiply(int firstNum, int secondNum) {
+        if (firstNum == 0 || secondNum == 0)
+        {
+            throw new UnsupportedOperationException("Multiplication by Zero is not allowed");
+        }
+        long result = (long) firstNum * secondNum;
+        if (result > Integer.MAX_VALUE)
+        {
+            throw new UnsupportedOperationException("Multiplication Overflow");
+        }
+        return (int) result;
+    }
 }
